@@ -1,7 +1,7 @@
-import sys
 import pygame
 from settings import Settings
 from ship import Ship
+import game_functions as gf
 
 def run_game():
     # Game initialization, settings and screen set
@@ -16,16 +16,7 @@ def run_game():
 
     # Start loop of main part of the game
     while True:
-
-        # Waiting for push any button
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                sys.exit()
-
-        # Refreshing screen
-        screen.fill(ai_settings.bg_color)
-        ship.blitme()
-        # Show last modified screen
-        pygame.display.flip()
+        gf.check_events()
+        gf.update_screen(ai_settings, screen, ship)
 
 run_game()
