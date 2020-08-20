@@ -16,7 +16,8 @@ def run_game():
 
     # Start loop of main part of the game
     while True:
-        gf.check_events()
+        gf.check_events(ship)
+        ship.update()
         gf.update_screen(ai_settings, screen, ship)
 
 run_game()
