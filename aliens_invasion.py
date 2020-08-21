@@ -9,7 +9,7 @@ def run_game():
     ai_settings = Settings()
     screen = pygame. display.set_mode((ai_settings.screen_width, ai_settings.screen_height))
     pygame.display.set_caption("Aliens Invasion")
-    ship = Ship(screen)
+    ship = Ship(ai_settings, screen)
 
     # Change color of background
     bg_color = (200, 200, 200)
