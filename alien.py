@@ -7,7 +7,7 @@ class Alien(Sprite):
 
     def __init__(self, ai_settings, screen):
         """Init alien and define his position"""
-        super(Alien).__init__()
+        super(Alien, self).__init__()
         self.screen = screen
         self.ai_settings = ai_settings
 
