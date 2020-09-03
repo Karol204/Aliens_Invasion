@@ -1,8 +1,9 @@
 import pygame
 from pygame.sprite import Sprite
 
+
 class Bullet(Sprite):
-    """Class created for menage shooted bullets from ship"""
+    """Class created for menage shot bullets from ship"""
 
     def __init__(self, ai_settings, screen, ship):
         """Create bullet's object in current ship position"""
@@ -25,7 +26,7 @@ class Bullet(Sprite):
         # Update bullet position
         self.y -= self.speed_factor
 
-        # Update of bulet's rect position
+        # Update of bullet's rect position
 
         self.rect.y = self.y
 
