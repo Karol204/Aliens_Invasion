@@ -16,7 +16,7 @@ def run_game():
     pygame.display.set_caption("Aliens Invasion")
 
     # Create button Game
-    play_button = Button(ai_settings, screen, "Game")
+    play_button = Button(ai_settings, screen, "Play")
 
     # Create a new copy for keep data about game
     stats = GameStats(ai_settings)
@@ -35,7 +35,7 @@ def run_game():
 
     # Start loop of main part of the game
     while True:
-        gf.check_events(ai_settings, screen, ship, bullets)
+        gf.check_events(ai_settings, screen, stats, play_button, ship, bullets)
         gf.update_screen(ai_settings, screen, stats, ship, aliens, bullets, play_button)
         if stats.game_active:
             ship.update()
