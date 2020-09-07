@@ -9,6 +9,9 @@ class GameStats():
         # Launch game
         self.game_active = False
 
+        # Best score
+        self.high_score = 0
+
     def reset_stats(self):
         """Init data that can change in game"""
         self.ships_left = self.ai_settings.ship_limit
